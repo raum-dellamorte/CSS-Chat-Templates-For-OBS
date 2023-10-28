@@ -54,6 +54,6 @@ button[data-a-target="chat-badge"] img {
 .chat-line__no-background > span:first-of-type::after { /* Add a pointer in front of chat message for funsies */
     content: "> "
 }
-.chat-input, .stream-chat-header, .channel-leaderboard, .viewer-card-layer__draggable, .chat-line__reply-icon, .chat-paused-footer, .simplebar-track {
+.chat-input, .stream-chat-header, .channel-leaderboard, .viewer-card-layer__draggable, .chat-line__reply-icon, .chat-paused-footer, .simplebar-track, .chat-room__content > div:first-of-type {
     display: none !important;
 }
