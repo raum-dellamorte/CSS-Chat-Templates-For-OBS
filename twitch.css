@@ -1,47 +1,57 @@
 /*
-	Twitch Live Chat CSS Template by t-wy
-	https://github.com/t-wy/Live-Chat-CSS-Templates
+    Modified from: "Twitch Live Chat CSS Template by t-wy"
+                    https://github.com/t-wy/Live-Chat-CSS-Templates
+    Modifications by Raum Dellamorte
 */
 
 #root > div {
-	background: #ffffff66 !important;
-	border-radius: 20px;
-	margin: 20px;
+    background: rgba(255,255,255,0.3) !important; /* Transparency is controlled by the last number with a value between 0.0, transparent, and 1.0, opaque */
+    border-radius: 20px; /* To round the corners. (I think, anyway, don't take my word for it.) */
+    margin: 20px;
 }
 body {
-	background: transparent !important;
-	--black-border: -2px -2px 0 black,-2px -1px 0 black,-2px 0px 0 black,-2px 1px 0 black,-2px 2px 0 black,-1px -2px 0 black,-1px -1px 0 black,-1px 0px 0 black,-1px 1px 0 black,-1px 2px 0 black,0px -2px 0 black,0px -1px 0 black,0px 0px 0 black,0px 1px 0 black,0px 2px 0 black,1px -2px 0 black,1px -1px 0 black,1px 0px 0 black,1px 1px 0 black,1px 2px 0 black,2px -2px 0 black,2px -1px 0 black,2px 0px 0 black,2px 1px 0 black,2px 2px 0 black;
+    background: transparent !important;
+    --black-border: -2px -2px 0 black,-2px -1px 0 black,-2px 0px 0 black,-2px 1px 0 black,-2px 2px 0 black,-1px -2px 0 black,-1px -1px 0 black,-1px 0px 0 black,-1px 1px 0 black,-1px 2px 0 black,0px -2px 0 black,0px -1px 0 black,0px 0px 0 black,0px 1px 0 black,0px 2px 0 black,1px -2px 0 black,1px -1px 0 black,1px 0px 0 black,1px 1px 0 black,1px 2px 0 black,2px -2px 0 black,2px -1px 0 black,2px 0px 0 black,2px 1px 0 black,2px 2px 0 black;
 }
 * {
-	font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* I plan to try and get a local font working for EXTREME Customization! I don't actually posses that level of enthusiasm. */
 }
 .chat-room {
-	background: transparent !important;
+    background: transparent !important;
 }
-.user-notice-line, .user-notice-line * {
-	padding: 0 !important;
-	margin: 0 !important;
-	background: rgba(0, 0, 0, 0) !important;
+.user-notice-line > div:first-of-type {
+    font-size: 18px !important;
+    color: #303030 !important;
+}
+.chat-author__display-name {
+    font-size: 26px !important;
+    text-shadow: var(--black-border);
 }
 button[data-a-target="chat-badge"] img {
-	height: 24px;
-}
-.chat-line__message-highlight {
-	padding: 5px 20px;
-	background: rgba(0, 0, 0, 0) !important;
+    height: 24px;
 }
 .chat-line__message, .chat-line__status {
-	background: rgba(0, 0, 0, 0) !important;
-	font-size: 32px;
-	line-height: 30px;
+    line-height: 36px !important;
+    background: rgba(0, 0, 0, 0) !important;
+    color: #863646 !important;
+    font-size: 32px;
+    line-height: 30px;
     text-shadow: var(--black-border);
-    font-weight: bold;
+    /* font-weight: bold; */
 }
-.PGirV p, .user-notice-line * {
-	font-size: 16px !important;
+.chat-line__message-body--highlighted * {
+    line-height: 50px !important;
+    padding: 5px 5px 5px 5px !important;
+    border-color: rgba(74, 55, 133, 34) !important;
+    background: rgba(74, 55, 133, 34) !important;
+    color: #863646 !important;
     text-shadow: var(--black-border);
-    font-weight: bold;
 }
-.chat-input, .stream-chat-header, .channel-leaderboard, .user-notice-line :first-child, .user-notice-line :first-child, .viewer-card-layer__draggable, .chat-line__reply-icon, .chat-paused-footer, .simplebar-track {
-	display: none !important;
+.text-fragment::before {
+    content: "\a";
+    white-space: pre;
+}
+.chat-input, .stream-chat-header, .channel-leaderboard, .viewer-card-layer__draggable, .chat-line__reply-icon, .chat-paused-footer, .simplebar-track {
+    display: none !important;
 }
