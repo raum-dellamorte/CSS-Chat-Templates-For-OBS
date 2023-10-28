@@ -48,9 +48,11 @@ button[data-a-target="chat-badge"] img {
     color: #863646 !important;
     text-shadow: var(--black-border);
 }
-.text-fragment::before {
-    content: "\a";
-    white-space: pre;
+.chat-line__username-container { /* Push chat message to next line under username */
+    width: 100%;
+}
+.chat-line__no-background > span::after { /* Add a pointer in front of chat message for funsies */
+    content: "> "
 }
 .chat-input, .stream-chat-header, .channel-leaderboard, .viewer-card-layer__draggable, .chat-line__reply-icon, .chat-paused-footer, .simplebar-track {
     display: none !important;
