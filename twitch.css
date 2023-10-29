@@ -20,6 +20,13 @@ body {
 .chat-room {
     background: transparent !important;
 }
+.chat-line__status { /* 'Welcome to the Chat Room' and the like */
+    font-size: 24px !important;
+    line-height: 40px !important;
+    color: #364686 !important;
+    text-shadow: var(--black-border);
+    background: rgba(0, 0, 0, 0) !important;
+}
 .user-notice-line > div:first-of-type { /* Notices from Twitch, like 'Redeemed Highlight My Message'. We're making the text small and gray */
     font-size: 18px !important;
     color: #303030 !important;
@@ -34,7 +41,20 @@ button[data-a-target="chat-badge"] img { /* The chat badges listed in front of a
 .chat-line__username-container { /* Push chat message to next line under username */
     width: 100%;
 }
-.chat-line__message, .chat-line__status { /* The message text itself */
+.chat-line__no-background > span:first-of-type { /* Hiding the colon so we can replace it */
+    color: rgba(0, 0, 0, 0) !important;
+}
+.chat-line__no-background > span:first-of-type::after {
+    content: "~> "; /* Replacing colon with fun pointer */
+    line-height: 36px !important;
+    font-size: 32px !important;
+    color: #368646 !important;
+    text-shadow: var(--black-border);
+}
+span[data-a-target="chat-message-text"] { 
+    margin-left: 10px; /* A little breathing room for the message body */
+}
+span[data-a-target="chat-message-text"] { /* The message text itself */
     line-height: 36px !important;
     font-size: 32px;
     background: rgba(0, 0, 0, 0) !important;
@@ -42,16 +62,17 @@ button[data-a-target="chat-badge"] img { /* The chat badges listed in front of a
     text-shadow: var(--black-border);
     /* font-weight: bold; */
 }
-.chat-line__message-body--highlighted * { /* The message text if it is highlighted */
+.chat-line__message-body--highlighted { /* If the message is highlighted, ditch the defaults */
+    border-color: rgba(0, 0, 0, 0) !important;
+    background: rgba(0, 0, 0, 0) !important;
+}
+.chat-line__message-body--highlighted > span:first-of-type { /* If the message is highlighted, custom highlight */
     line-height: 50px !important;
     padding: 5px 5px 5px 5px !important;
     border-color: rgba(74, 55, 133, 34) !important;
     background: rgba(74, 55, 133, 34) !important;
     color: #863646 !important;
     text-shadow: var(--black-border);
-}
-.chat-line__no-background > span:first-of-type::after { /* Add a pointer in front of chat message for funsies */
-    content: "> "
 }
 .chat-input, .stream-chat-header, .channel-leaderboard, .viewer-card-layer__draggable, .chat-line__reply-icon, .chat-paused-footer, .simplebar-track, .chat-room__content > div:first-of-type {
     /* All the bits and bobs we don't want to see */
