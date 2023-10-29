@@ -15,32 +15,34 @@ body {
 }
 * {
     font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
-    /* I plan to try and get a local font working for EXTREME Customization! I don't actually posses that level of enthusiasm. */
+    /* I plan to try and get a local font working for EXTREME Customization! The enthusiasm is false, but the intention is real. */
 }
 .chat-room {
     background: transparent !important;
 }
-.user-notice-line > div:first-of-type {
+.user-notice-line > div:first-of-type { /* Notices from Twitch, like 'Redeemed Highlight My Message'. We're making the text small and gray */
     font-size: 18px !important;
     color: #303030 !important;
 }
-.chat-author__display-name {
+button[data-a-target="chat-badge"] img { /* The chat badges listed in front of a username */
+    height: 24px;
+}
+.chat-author__display-name { /* The username. We make it a bit smaller than the message text */
     font-size: 26px !important;
     text-shadow: var(--black-border);
 }
-button[data-a-target="chat-badge"] img {
-    height: 24px;
+.chat-line__username-container { /* Push chat message to next line under username */
+    width: 100%;
 }
-.chat-line__message, .chat-line__status {
+.chat-line__message, .chat-line__status { /* The message text itself */
     line-height: 36px !important;
+    font-size: 32px;
     background: rgba(0, 0, 0, 0) !important;
     color: #863646 !important;
-    font-size: 32px;
-    line-height: 30px;
     text-shadow: var(--black-border);
     /* font-weight: bold; */
 }
-.chat-line__message-body--highlighted * {
+.chat-line__message-body--highlighted * { /* The message text if it is highlighted */
     line-height: 50px !important;
     padding: 5px 5px 5px 5px !important;
     border-color: rgba(74, 55, 133, 34) !important;
@@ -48,12 +50,10 @@ button[data-a-target="chat-badge"] img {
     color: #863646 !important;
     text-shadow: var(--black-border);
 }
-.chat-line__username-container { /* Push chat message to next line under username */
-    width: 100%;
-}
 .chat-line__no-background > span:first-of-type::after { /* Add a pointer in front of chat message for funsies */
     content: "> "
 }
 .chat-input, .stream-chat-header, .channel-leaderboard, .viewer-card-layer__draggable, .chat-line__reply-icon, .chat-paused-footer, .simplebar-track, .chat-room__content > div:first-of-type {
+    /* All the bits and bobs we don't want to see */
     display: none !important;
 }
