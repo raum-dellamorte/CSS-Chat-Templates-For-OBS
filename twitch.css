@@ -11,7 +11,11 @@
 }
 body {
     background: transparent !important;
-    --black-border: -2px -2px 0 black,-2px -1px 0 black,-2px 0px 0 black,-2px 1px 0 black,-2px 2px 0 black,-1px -2px 0 black,-1px -1px 0 black,-1px 0px 0 black,-1px 1px 0 black,-1px 2px 0 black,0px -2px 0 black,0px -1px 0 black,0px 0px 0 black,0px 1px 0 black,0px 2px 0 black,1px -2px 0 black,1px -1px 0 black,1px 0px 0 black,1px 1px 0 black,1px 2px 0 black,2px -2px 0 black,2px -1px 0 black,2px 0px 0 black,2px 1px 0 black,2px 2px 0 black;
+    --message-color: rgb(120, 24, 42);
+    --message-border-color: rgb(55,115,75);
+    --username-border-color: rgb(45,0,75);
+    --message-border: -2px -2px 0 var(--message-border-color),-2px -1px 0 var(--message-border-color),-2px 0px 0 var(--message-border-color),-2px 1px 0 var(--message-border-color),-2px 2px 0 var(--message-border-color),-1px -2px 0 var(--message-border-color),-1px -1px 0 var(--message-border-color),-1px 0px 0 var(--message-border-color),-1px 1px 0 var(--message-border-color),-1px 2px 0 var(--message-border-color),0px -2px 0 var(--message-border-color),0px -1px 0 var(--message-border-color),0px 0px 0 var(--message-border-color),0px 1px 0 var(--message-border-color),0px 2px 0 var(--message-border-color),1px -2px 0 var(--message-border-color),1px -1px 0 var(--message-border-color),1px 0px 0 var(--message-border-color),1px 1px 0 var(--message-border-color),1px 2px 0 var(--message-border-color),2px -2px 0 var(--message-border-color),2px -1px 0 var(--message-border-color),2px 0px 0 var(--message-border-color),2px 1px 0 var(--message-border-color),2px 2px 0 var(--message-border-color);
+    --username-border: -2px -2px 0 var(--username-border-color),-2px -1px 0 var(--username-border-color),-2px 0px 0 var(--username-border-color),-2px 1px 0 var(--username-border-color),-2px 2px 0 var(--username-border-color),-1px -2px 0 var(--username-border-color),-1px -1px 0 var(--username-border-color),-1px 0px 0 var(--username-border-color),-1px 1px 0 var(--username-border-color),-1px 2px 0 var(--username-border-color),0px -2px 0 var(--username-border-color),0px -1px 0 var(--username-border-color),0px 0px 0 var(--username-border-color),0px 1px 0 var(--username-border-color),0px 2px 0 var(--username-border-color),1px -2px 0 var(--username-border-color),1px -1px 0 var(--username-border-color),1px 0px 0 var(--username-border-color),1px 1px 0 var(--username-border-color),1px 2px 0 var(--username-border-color),2px -2px 0 var(--username-border-color),2px -1px 0 var(--username-border-color),2px 0px 0 var(--username-border-color),2px 1px 0 var(--username-border-color),2px 2px 0 var(--username-border-color);
 }
 * {
     font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -21,35 +25,35 @@ body {
     background: transparent !important;
 }
 .chat-line__status { /* 'Welcome to the Chat Room' and the like */
-    font-size: 24px !important;
     line-height: 40px !important;
-    color: #364686 !important;
-    text-shadow: var(--black-border);
+    font-size: 24px !important;
     background: rgba(0, 0, 0, 0) !important;
+    color: rgb(54, 70, 135) !important;
+    text-shadow: var(--username-border);
 }
 .user-notice-line > div:first-of-type { /* Notices from Twitch, like 'Redeemed Highlight My Message'. We're making the text small and gray */
     font-size: 18px !important;
-    color: #303030 !important;
+    color: rgb(48, 48, 48) !important;
 }
 button[data-a-target="chat-badge"] img { /* The chat badges listed in front of a username */
     height: 24px;
 }
 .chat-author__display-name { /* The username. We make it a bit smaller than the message text */
     font-size: 26px !important;
-    text-shadow: var(--black-border);
+    text-shadow: var(--username-border);
 }
 .chat-line__username-container { /* Push chat message to next line under username */
     width: 100%;
 }
-.chat-line__no-background > span:first-of-type { /* Hiding the colon so we can replace it */
+.chat-line__no-background > span:first-of-type {
     color: rgba(0, 0, 0, 0) !important;
 }
-.chat-line__no-background > span:first-of-type::after {
-    content: "~> "; /* Replacing colon with fun pointer */
+.chat-line__no-background > span:first-of-type::after { /* Add a pointer in front of chat message for funsies */
+    content: "~> ";
     line-height: 36px !important;
     font-size: 32px !important;
-    color: #368646 !important;
-    text-shadow: var(--black-border);
+    color: rgb(54, 135, 119) !important;
+    text-shadow: var(--username-border);
 }
 span[data-a-target="chat-message-text"] { 
     margin-left: 10px; /* A little breathing room for the message body */
@@ -58,8 +62,8 @@ span[data-a-target="chat-message-text"] { /* The message text itself */
     line-height: 36px !important;
     font-size: 32px;
     background: rgba(0, 0, 0, 0) !important;
-    color: #863646 !important;
-    text-shadow: var(--black-border);
+    color: var(--message-color) !important;
+    text-shadow: var(--message-border);
     /* font-weight: bold; */
 }
 .chat-line__message-body--highlighted { /* If the message is highlighted, ditch the defaults */
@@ -71,8 +75,8 @@ span[data-a-target="chat-message-text"] { /* The message text itself */
     padding: 5px 5px 5px 5px !important;
     border-color: rgba(74, 55, 133, 34) !important;
     background: rgba(74, 55, 133, 34) !important;
-    color: #863646 !important;
-    text-shadow: var(--black-border);
+    color: var(--message-color) !important;
+    text-shadow: var(--message-border);
 }
 .chat-input, .stream-chat-header, .channel-leaderboard, .viewer-card-layer__draggable, .chat-line__reply-icon, .chat-paused-footer, .simplebar-track, .chat-room__content > div:first-of-type {
     /* All the bits and bobs we don't want to see */
