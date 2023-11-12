@@ -8,7 +8,11 @@ I haven't so much as looked at the Youtube template.
 For the Twitch template:
 - I noticed that highlighted messages weren't being displayed and I've fixed that, but at the moment it could still look better.
 - I also wanted to start the text of a chat message on the line below the person's name to help with readability in the case of a very narrow browser source pane.
-- I would like to add more variables near the top for ease of customization, such as font colors, font family, opacity, etc.
+- I added more variables near the top for ease of customization; just font colors at the moment.
+
+_If you don't like the color scheme it's trivial to change._
+
+![Twitch](TwitchChat-Raum-01.png)
 
 ## What follows is from t-wy's original README.md
 The images have not been updated.
