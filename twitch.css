@@ -20,15 +20,17 @@ body {
     --message-pointer-color: rgb(54, 135, 119);
     --highlight-outline-color: rgb(119, 49, 77);
     --highlight-bg-color: rgba(114, 76, 230, 0.80);
-    --welcome-color: rgb(43, 80, 230);
-    --welcome-outline-color: rgb(45, 0, 75);
-    --welcome-line-height: 28px;
-    --welcome-font-size: 24px;
     --notice-color: rgb(99, 99, 99); /* Notices from Twitch, like 'Redeemed Highlight My Message' */
+    /* Server message settings like "Welcome to the chat room!" line sent by the server */
+    --server-message-color: rgb(43, 80, 230);
+    --server-message-outline-color: rgb(45, 0, 75);
+    --server-message-line-height: 28px;
+    --server-message-font-size: 24px;
     /* No --username-color: Username font colors are random */
     --username-outline-color: rgb(45,0,75);
     --message-shadow: -2px -2px 0 var(--message-outline-color),-2px -1px 0 var(--message-outline-color),-2px 0px 0 var(--message-outline-color),-2px 1px 0 var(--message-outline-color),-2px 2px 0 var(--message-outline-color),-1px -2px 0 var(--message-outline-color),-1px -1px 0 var(--message-outline-color),-1px 0px 0 var(--message-outline-color),-1px 1px 0 var(--message-outline-color),-1px 2px 0 var(--message-outline-color),0px -2px 0 var(--message-outline-color),0px -1px 0 var(--message-outline-color),0px 0px 0 var(--message-outline-color),0px 1px 0 var(--message-outline-color),0px 2px 0 var(--message-outline-color),1px -2px 0 var(--message-outline-color),1px -1px 0 var(--message-outline-color),1px 0px 0 var(--message-outline-color),1px 1px 0 var(--message-outline-color),1px 2px 0 var(--message-outline-color),2px -2px 0 var(--message-outline-color),2px -1px 0 var(--message-outline-color),2px 0px 0 var(--message-outline-color),2px 1px 0 var(--message-outline-color),2px 2px 0 var(--message-outline-color);
     --username-shadow: -2px -2px 0 var(--username-outline-color),-2px -1px 0 var(--username-outline-color),-2px 0px 0 var(--username-outline-color),-2px 1px 0 var(--username-outline-color),-2px 2px 0 var(--username-outline-color),-1px -2px 0 var(--username-outline-color),-1px -1px 0 var(--username-outline-color),-1px 0px 0 var(--username-outline-color),-1px 1px 0 var(--username-outline-color),-1px 2px 0 var(--username-outline-color),0px -2px 0 var(--username-outline-color),0px -1px 0 var(--username-outline-color),0px 0px 0 var(--username-outline-color),0px 1px 0 var(--username-outline-color),0px 2px 0 var(--username-outline-color),1px -2px 0 var(--username-outline-color),1px -1px 0 var(--username-outline-color),1px 0px 0 var(--username-outline-color),1px 1px 0 var(--username-outline-color),1px 2px 0 var(--username-outline-color),2px -2px 0 var(--username-outline-color),2px -1px 0 var(--username-outline-color),2px 0px 0 var(--username-outline-color),2px 1px 0 var(--username-outline-color),2px 2px 0 var(--username-outline-color);
+    --server-message-shadow: -2px -2px 0 var(--server-message-outline-color),-2px -1px 0 var(--server-message-outline-color),-2px 0px 0 var(--server-message-outline-color),-2px 1px 0 var(--server-message-outline-color),-2px 2px 0 var(--server-message-outline-color),-1px -2px 0 var(--server-message-outline-color),-1px -1px 0 var(--server-message-outline-color),-1px 0px 0 var(--server-message-outline-color),-1px 1px 0 var(--server-message-outline-color),-1px 2px 0 var(--server-message-outline-color),0px -2px 0 var(--server-message-outline-color),0px -1px 0 var(--server-message-outline-color),0px 0px 0 var(--server-message-outline-color),0px 1px 0 var(--server-message-outline-color),0px 2px 0 var(--server-message-outline-color),1px -2px 0 var(--server-message-outline-color),1px -1px 0 var(--server-message-outline-color),1px 0px 0 var(--server-message-outline-color),1px 1px 0 var(--server-message-outline-color),1px 2px 0 var(--server-message-outline-color),2px -2px 0 var(--server-message-outline-color),2px -1px 0 var(--server-message-outline-color),2px 0px 0 var(--server-message-outline-color),2px 1px 0 var(--server-message-outline-color),2px 2px 0 var(--server-message-outline-color);
 }
 * {
     font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -38,11 +40,11 @@ body {
     background: transparent !important;
 }
 .chat-line__status { /* 'Welcome to the Chat Room' and the like */
-    line-height: var(--welcome-line-height) !important;
-    font-size: var(--welcome-font-size) !important;
+    line-height: var(--server-message-line-height) !important;
+    font-size: var(--server-message-font-size) !important;
     background: rgba(0, 0, 0, 0) !important;
-    color: var(--welcome-color) !important;
-    text-shadow: var(--username-shadow);
+    color: var(--server-message-color) !important;
+    text-shadow: var(--server-message-shadow);
 }
 .user-notice-line > div:first-of-type { /* Notices from Twitch */
     font-size: 18px !important;
