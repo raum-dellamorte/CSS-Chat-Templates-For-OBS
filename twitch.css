@@ -72,9 +72,9 @@ span[data-a-target="chat-message-text"] { /* The message text itself */
 }
 .chat-line__message-body--highlighted > span:first-of-type { /* If the message is highlighted, custom highlight */
     line-height: 50px !important;
-    padding: 5px 5px 5px 5px !important;
     border-color: rgba(74, 55, 133, 34) !important;
     background: rgba(74, 55, 133, 34) !important;
+    padding: 0px 5px 1px 5px !important;
     color: var(--message-color) !important;
     text-shadow: var(--message-border);
 }
