@@ -23,7 +23,7 @@ body {
     --welcome-line-height: 28px;
     --welcome-font-size: 24px;
     --welcome-color: rgb(43, 80, 230);
-    --welcome-outline-color: rgb(45,0,75);
+    --welcome-outline-color: rgb(45, 0, 75);
     /* No --username-color: Username font colors are random */
     --username-outline-color: rgb(45,0,75);
     --message-shadow: -2px -2px 0 var(--message-outline-color),-2px -1px 0 var(--message-outline-color),-2px 0px 0 var(--message-outline-color),-2px 1px 0 var(--message-outline-color),-2px 2px 0 var(--message-outline-color),-1px -2px 0 var(--message-outline-color),-1px -1px 0 var(--message-outline-color),-1px 0px 0 var(--message-outline-color),-1px 1px 0 var(--message-outline-color),-1px 2px 0 var(--message-outline-color),0px -2px 0 var(--message-outline-color),0px -1px 0 var(--message-outline-color),0px 0px 0 var(--message-outline-color),0px 1px 0 var(--message-outline-color),0px 2px 0 var(--message-outline-color),1px -2px 0 var(--message-outline-color),1px -1px 0 var(--message-outline-color),1px 0px 0 var(--message-outline-color),1px 1px 0 var(--message-outline-color),1px 2px 0 var(--message-outline-color),2px -2px 0 var(--message-outline-color),2px -1px 0 var(--message-outline-color),2px 0px 0 var(--message-outline-color),2px 1px 0 var(--message-outline-color),2px 2px 0 var(--message-outline-color);
