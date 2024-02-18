@@ -12,23 +12,28 @@
 body {
     background: transparent !important;
     /* Convenience Variables for basic customization */
+    /* Chat message settings */
     --message-color: rgb(0, 192, 173);
     --message-outline-color: rgb(119, 49, 77);
     --message-line-height: 44px;
     --message-font-size: 40px;
+    /* --message-pointer points to the start of a chat message. This should work with any unicode characters, untested */
     --message-pointer: "~> ";
     --message-pointer-color: rgb(54, 135, 119);
+    /* Highlighted message settings */
     --highlight-color: var(--message-color);
     --highlight-outline-color: rgb(119, 49, 77);
     --highlight-bg-color: rgba(114, 76, 230, 0.80);
-    --notice-color: rgb(99, 99, 99); /* Notices from Twitch, like 'Redeemed Highlight My Message' */
     /* Server message settings like "Welcome to the chat room!" line sent by the server */
     --server-message-color: rgb(43, 80, 230);
     --server-message-outline-color: rgb(45, 0, 75);
     --server-message-line-height: 28px;
     --server-message-font-size: 24px;
+    /* Notices from Twitch, like 'Redeemed Highlight My Message' */
+    --notice-color: rgb(99, 99, 99);
     /* No --username-color: Username font colors are random */
     --username-outline-color: rgb(45,0,75);
+    /* Text Shadow Vars. Colors controlled with respective outline vars above. Only modify if you know what you're doing */
     --message-shadow: -2px -2px 0 var(--message-outline-color),-2px -1px 0 var(--message-outline-color),-2px 0px 0 var(--message-outline-color),-2px 1px 0 var(--message-outline-color),-2px 2px 0 var(--message-outline-color),-1px -2px 0 var(--message-outline-color),-1px -1px 0 var(--message-outline-color),-1px 0px 0 var(--message-outline-color),-1px 1px 0 var(--message-outline-color),-1px 2px 0 var(--message-outline-color),0px -2px 0 var(--message-outline-color),0px -1px 0 var(--message-outline-color),0px 0px 0 var(--message-outline-color),0px 1px 0 var(--message-outline-color),0px 2px 0 var(--message-outline-color),1px -2px 0 var(--message-outline-color),1px -1px 0 var(--message-outline-color),1px 0px 0 var(--message-outline-color),1px 1px 0 var(--message-outline-color),1px 2px 0 var(--message-outline-color),2px -2px 0 var(--message-outline-color),2px -1px 0 var(--message-outline-color),2px 0px 0 var(--message-outline-color),2px 1px 0 var(--message-outline-color),2px 2px 0 var(--message-outline-color);
     --highlight-shadow: -2px -2px 0 var(--highlight-outline-color),-2px -1px 0 var(--highlight-outline-color),-2px 0px 0 var(--highlight-outline-color),-2px 1px 0 var(--highlight-outline-color),-2px 2px 0 var(--highlight-outline-color),-1px -2px 0 var(--highlight-outline-color),-1px -1px 0 var(--highlight-outline-color),-1px 0px 0 var(--highlight-outline-color),-1px 1px 0 var(--highlight-outline-color),-1px 2px 0 var(--highlight-outline-color),0px -2px 0 var(--highlight-outline-color),0px -1px 0 var(--highlight-outline-color),0px 0px 0 var(--highlight-outline-color),0px 1px 0 var(--highlight-outline-color),0px 2px 0 var(--highlight-outline-color),1px -2px 0 var(--highlight-outline-color),1px -1px 0 var(--highlight-outline-color),1px 0px 0 var(--highlight-outline-color),1px 1px 0 var(--highlight-outline-color),1px 2px 0 var(--highlight-outline-color),2px -2px 0 var(--highlight-outline-color),2px -1px 0 var(--highlight-outline-color),2px 0px 0 var(--highlight-outline-color),2px 1px 0 var(--highlight-outline-color),2px 2px 0 var(--highlight-outline-color);
     --username-shadow: -2px -2px 0 var(--username-outline-color),-2px -1px 0 var(--username-outline-color),-2px 0px 0 var(--username-outline-color),-2px 1px 0 var(--username-outline-color),-2px 2px 0 var(--username-outline-color),-1px -2px 0 var(--username-outline-color),-1px -1px 0 var(--username-outline-color),-1px 0px 0 var(--username-outline-color),-1px 1px 0 var(--username-outline-color),-1px 2px 0 var(--username-outline-color),0px -2px 0 var(--username-outline-color),0px -1px 0 var(--username-outline-color),0px 0px 0 var(--username-outline-color),0px 1px 0 var(--username-outline-color),0px 2px 0 var(--username-outline-color),1px -2px 0 var(--username-outline-color),1px -1px 0 var(--username-outline-color),1px 0px 0 var(--username-outline-color),1px 1px 0 var(--username-outline-color),1px 2px 0 var(--username-outline-color),2px -2px 0 var(--username-outline-color),2px -1px 0 var(--username-outline-color),2px 0px 0 var(--username-outline-color),2px 1px 0 var(--username-outline-color),2px 2px 0 var(--username-outline-color);
