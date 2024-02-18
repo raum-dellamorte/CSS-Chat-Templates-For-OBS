@@ -11,11 +11,23 @@
 }
 body {
     background: transparent !important;
+    /* Convenience Variables for basic customization */
     --message-color: rgb(0, 192, 173);
-    --message-border-color: rgb(119, 49, 77);
-    --username-border-color: rgb(45,0,75);
-    --message-border: -2px -2px 0 var(--message-border-color),-2px -1px 0 var(--message-border-color),-2px 0px 0 var(--message-border-color),-2px 1px 0 var(--message-border-color),-2px 2px 0 var(--message-border-color),-1px -2px 0 var(--message-border-color),-1px -1px 0 var(--message-border-color),-1px 0px 0 var(--message-border-color),-1px 1px 0 var(--message-border-color),-1px 2px 0 var(--message-border-color),0px -2px 0 var(--message-border-color),0px -1px 0 var(--message-border-color),0px 0px 0 var(--message-border-color),0px 1px 0 var(--message-border-color),0px 2px 0 var(--message-border-color),1px -2px 0 var(--message-border-color),1px -1px 0 var(--message-border-color),1px 0px 0 var(--message-border-color),1px 1px 0 var(--message-border-color),1px 2px 0 var(--message-border-color),2px -2px 0 var(--message-border-color),2px -1px 0 var(--message-border-color),2px 0px 0 var(--message-border-color),2px 1px 0 var(--message-border-color),2px 2px 0 var(--message-border-color);
-    --username-border: -2px -2px 0 var(--username-border-color),-2px -1px 0 var(--username-border-color),-2px 0px 0 var(--username-border-color),-2px 1px 0 var(--username-border-color),-2px 2px 0 var(--username-border-color),-1px -2px 0 var(--username-border-color),-1px -1px 0 var(--username-border-color),-1px 0px 0 var(--username-border-color),-1px 1px 0 var(--username-border-color),-1px 2px 0 var(--username-border-color),0px -2px 0 var(--username-border-color),0px -1px 0 var(--username-border-color),0px 0px 0 var(--username-border-color),0px 1px 0 var(--username-border-color),0px 2px 0 var(--username-border-color),1px -2px 0 var(--username-border-color),1px -1px 0 var(--username-border-color),1px 0px 0 var(--username-border-color),1px 1px 0 var(--username-border-color),1px 2px 0 var(--username-border-color),2px -2px 0 var(--username-border-color),2px -1px 0 var(--username-border-color),2px 0px 0 var(--username-border-color),2px 1px 0 var(--username-border-color),2px 2px 0 var(--username-border-color);
+    --message-outline-color: rgb(119, 49, 77);
+    --message-line-height: 44px;
+    --message-font-size: 40px;
+    --message-pointer: "~> ";
+    --message-pointer-color: rgb(54, 135, 119);
+    --highlight-outline-color: rgb(119, 49, 77);
+    --highlight-bg-color: rgba(114, 76, 230, 0.80);
+    --welcome-line-height: 40px;
+    --welcome-font-size: 36px;
+    --welcome-color: rgb(43, 80, 230);
+    --welcome-outline-color: rgb(45,0,75);
+    /* No --username-color: Username font colors are random */
+    --username-outline-color: rgb(45,0,75);
+    --message-shadow: -2px -2px 0 var(--message-outline-color),-2px -1px 0 var(--message-outline-color),-2px 0px 0 var(--message-outline-color),-2px 1px 0 var(--message-outline-color),-2px 2px 0 var(--message-outline-color),-1px -2px 0 var(--message-outline-color),-1px -1px 0 var(--message-outline-color),-1px 0px 0 var(--message-outline-color),-1px 1px 0 var(--message-outline-color),-1px 2px 0 var(--message-outline-color),0px -2px 0 var(--message-outline-color),0px -1px 0 var(--message-outline-color),0px 0px 0 var(--message-outline-color),0px 1px 0 var(--message-outline-color),0px 2px 0 var(--message-outline-color),1px -2px 0 var(--message-outline-color),1px -1px 0 var(--message-outline-color),1px 0px 0 var(--message-outline-color),1px 1px 0 var(--message-outline-color),1px 2px 0 var(--message-outline-color),2px -2px 0 var(--message-outline-color),2px -1px 0 var(--message-outline-color),2px 0px 0 var(--message-outline-color),2px 1px 0 var(--message-outline-color),2px 2px 0 var(--message-outline-color);
+    --username-shadow: -2px -2px 0 var(--username-outline-color),-2px -1px 0 var(--username-outline-color),-2px 0px 0 var(--username-outline-color),-2px 1px 0 var(--username-outline-color),-2px 2px 0 var(--username-outline-color),-1px -2px 0 var(--username-outline-color),-1px -1px 0 var(--username-outline-color),-1px 0px 0 var(--username-outline-color),-1px 1px 0 var(--username-outline-color),-1px 2px 0 var(--username-outline-color),0px -2px 0 var(--username-outline-color),0px -1px 0 var(--username-outline-color),0px 0px 0 var(--username-outline-color),0px 1px 0 var(--username-outline-color),0px 2px 0 var(--username-outline-color),1px -2px 0 var(--username-outline-color),1px -1px 0 var(--username-outline-color),1px 0px 0 var(--username-outline-color),1px 1px 0 var(--username-outline-color),1px 2px 0 var(--username-outline-color),2px -2px 0 var(--username-outline-color),2px -1px 0 var(--username-outline-color),2px 0px 0 var(--username-outline-color),2px 1px 0 var(--username-outline-color),2px 2px 0 var(--username-outline-color);
 }
 * {
     font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -25,11 +37,11 @@ body {
     background: transparent !important;
 }
 .chat-line__status { /* 'Welcome to the Chat Room' and the like */
-    line-height: 40px !important;
-    font-size: 24px !important;
+    line-height: var(--welcome-line-height) !important;
+    font-size: var(--welcome-font-size) !important;
     background: rgba(0, 0, 0, 0) !important;
-    color: rgb(54, 70, 135) !important;
-    text-shadow: var(--username-border);
+    color: var(--welcome-color) !important;
+    text-shadow: var(--username-shadow);
 }
 .user-notice-line > div:first-of-type { /* Notices from Twitch, like 'Redeemed Highlight My Message'. We're making the text small and gray */
     font-size: 18px !important;
@@ -40,7 +52,7 @@ button[data-a-target="chat-badge"] img { /* The chat badges listed in front of a
 }
 .chat-author__display-name { /* The username. We make it a bit smaller than the message text */
     font-size: 26px !important;
-    text-shadow: var(--username-border);
+    text-shadow: var(--username-shadow);
 }
 .chat-line__username-container { /* Push chat message to next line under username */
     width: 100%;
@@ -49,21 +61,21 @@ button[data-a-target="chat-badge"] img { /* The chat badges listed in front of a
     color: rgba(0, 0, 0, 0) !important;
 }
 .chat-line__no-background > span:first-of-type::after { /* Add a pointer in front of chat message for funsies */
-    content: "~> ";
-    line-height: 36px !important;
-    font-size: 32px !important;
-    color: rgb(54, 135, 119) !important;
-    text-shadow: var(--username-border);
+    content: var(--message-pointer);
+    line-height: var(--message-line-height) !important;
+    font-size: var(--message-font-size) !important;
+    color: var(--message-pointer-color) !important;
+    text-shadow: var(--username-shadow);
 }
 span[data-a-target="chat-message-text"] { 
     margin-left: 10px; /* A little breathing room for the message body */
 }
 span[data-a-target="chat-message-text"] { /* The message text itself */
-    line-height: 36px !important;
-    font-size: 32px;
+    line-height: var(--message-line-height) !important;
+    font-size: var(--message-font-size) !important;
     background: rgba(0, 0, 0, 0) !important;
     color: var(--message-color) !important;
-    text-shadow: var(--message-border);
+    text-shadow: var(--message-shadow);
     /* font-weight: bold; */
 }
 .chat-line__message-body--highlighted { /* If the message is highlighted, ditch the defaults */
@@ -72,11 +84,11 @@ span[data-a-target="chat-message-text"] { /* The message text itself */
 }
 .chat-line__message-body--highlighted > span:first-of-type { /* If the message is highlighted, custom highlight */
     line-height: 50px !important;
-    border-color: rgba(74, 55, 133, 34) !important;
-    background: rgba(74, 55, 133, 34) !important;
     padding: 0px 5px 1px 5px !important;
+    border-color: var(--highlight-outline-color) !important;
+    background: var(--highlight-bg-color) !important;
     color: var(--message-color) !important;
-    text-shadow: var(--message-border);
+    text-shadow: var(--message-shadow);
 }
 .chat-input, .stream-chat-header, .channel-leaderboard, .viewer-card-layer__draggable, .chat-line__reply-icon, .chat-paused-footer, .simplebar-track, .chat-room__content > div:first-of-type {
     /* All the bits and bobs we don't want to see */
