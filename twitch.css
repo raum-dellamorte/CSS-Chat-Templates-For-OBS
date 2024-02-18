@@ -4,11 +4,6 @@
     Modifications by Raum Dellamorte
 */
 
-#root > div {
-    background: rgba(50,20,20,0.7) !important; /* Transparency is controlled by the last number with a value between 0.0, transparent, and 1.0, opaque */
-    border-radius: 20px; /* To round the corners. (I think, anyway, don't take my word for it.) */
-    margin: 20px;
-}
 body {
     /* Convenience Variables for basic customization */
     /* Chat message settings */
@@ -39,6 +34,11 @@ body {
     --server-message-shadow: -2px -2px 0 var(--server-message-outline-color),-2px -1px 0 var(--server-message-outline-color),-2px 0px 0 var(--server-message-outline-color),-2px 1px 0 var(--server-message-outline-color),-2px 2px 0 var(--server-message-outline-color),-1px -2px 0 var(--server-message-outline-color),-1px -1px 0 var(--server-message-outline-color),-1px 0px 0 var(--server-message-outline-color),-1px 1px 0 var(--server-message-outline-color),-1px 2px 0 var(--server-message-outline-color),0px -2px 0 var(--server-message-outline-color),0px -1px 0 var(--server-message-outline-color),0px 0px 0 var(--server-message-outline-color),0px 1px 0 var(--server-message-outline-color),0px 2px 0 var(--server-message-outline-color),1px -2px 0 var(--server-message-outline-color),1px -1px 0 var(--server-message-outline-color),1px 0px 0 var(--server-message-outline-color),1px 1px 0 var(--server-message-outline-color),1px 2px 0 var(--server-message-outline-color),2px -2px 0 var(--server-message-outline-color),2px -1px 0 var(--server-message-outline-color),2px 0px 0 var(--server-message-outline-color),2px 1px 0 var(--server-message-outline-color),2px 2px 0 var(--server-message-outline-color);
     /* End of Convenience Variables */
     background: transparent !important;
+}
+#root > div {
+    background: rgba(50,20,20,0.7) !important; /* Transparency is controlled by the last number with a value between 0.0, transparent, and 1.0, opaque */
+    border-radius: 20px; /* To round the corners. (I think, anyway, don't take my word for it.) */
+    margin: 20px;
 }
 * {
     font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
