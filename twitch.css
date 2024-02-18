@@ -18,6 +18,7 @@ body {
     --message-font-size: 40px;
     --message-pointer: "~> ";
     --message-pointer-color: rgb(54, 135, 119);
+    --highlight-color: var(--message-color);
     --highlight-outline-color: rgb(119, 49, 77);
     --highlight-bg-color: rgba(114, 76, 230, 0.80);
     --notice-color: rgb(99, 99, 99); /* Notices from Twitch, like 'Redeemed Highlight My Message' */
@@ -29,6 +30,7 @@ body {
     /* No --username-color: Username font colors are random */
     --username-outline-color: rgb(45,0,75);
     --message-shadow: -2px -2px 0 var(--message-outline-color),-2px -1px 0 var(--message-outline-color),-2px 0px 0 var(--message-outline-color),-2px 1px 0 var(--message-outline-color),-2px 2px 0 var(--message-outline-color),-1px -2px 0 var(--message-outline-color),-1px -1px 0 var(--message-outline-color),-1px 0px 0 var(--message-outline-color),-1px 1px 0 var(--message-outline-color),-1px 2px 0 var(--message-outline-color),0px -2px 0 var(--message-outline-color),0px -1px 0 var(--message-outline-color),0px 0px 0 var(--message-outline-color),0px 1px 0 var(--message-outline-color),0px 2px 0 var(--message-outline-color),1px -2px 0 var(--message-outline-color),1px -1px 0 var(--message-outline-color),1px 0px 0 var(--message-outline-color),1px 1px 0 var(--message-outline-color),1px 2px 0 var(--message-outline-color),2px -2px 0 var(--message-outline-color),2px -1px 0 var(--message-outline-color),2px 0px 0 var(--message-outline-color),2px 1px 0 var(--message-outline-color),2px 2px 0 var(--message-outline-color);
+    --highlight-shadow: -2px -2px 0 var(--highlight-outline-color),-2px -1px 0 var(--highlight-outline-color),-2px 0px 0 var(--highlight-outline-color),-2px 1px 0 var(--highlight-outline-color),-2px 2px 0 var(--highlight-outline-color),-1px -2px 0 var(--highlight-outline-color),-1px -1px 0 var(--highlight-outline-color),-1px 0px 0 var(--highlight-outline-color),-1px 1px 0 var(--highlight-outline-color),-1px 2px 0 var(--highlight-outline-color),0px -2px 0 var(--highlight-outline-color),0px -1px 0 var(--highlight-outline-color),0px 0px 0 var(--highlight-outline-color),0px 1px 0 var(--highlight-outline-color),0px 2px 0 var(--highlight-outline-color),1px -2px 0 var(--highlight-outline-color),1px -1px 0 var(--highlight-outline-color),1px 0px 0 var(--highlight-outline-color),1px 1px 0 var(--highlight-outline-color),1px 2px 0 var(--highlight-outline-color),2px -2px 0 var(--highlight-outline-color),2px -1px 0 var(--highlight-outline-color),2px 0px 0 var(--highlight-outline-color),2px 1px 0 var(--highlight-outline-color),2px 2px 0 var(--highlight-outline-color);
     --username-shadow: -2px -2px 0 var(--username-outline-color),-2px -1px 0 var(--username-outline-color),-2px 0px 0 var(--username-outline-color),-2px 1px 0 var(--username-outline-color),-2px 2px 0 var(--username-outline-color),-1px -2px 0 var(--username-outline-color),-1px -1px 0 var(--username-outline-color),-1px 0px 0 var(--username-outline-color),-1px 1px 0 var(--username-outline-color),-1px 2px 0 var(--username-outline-color),0px -2px 0 var(--username-outline-color),0px -1px 0 var(--username-outline-color),0px 0px 0 var(--username-outline-color),0px 1px 0 var(--username-outline-color),0px 2px 0 var(--username-outline-color),1px -2px 0 var(--username-outline-color),1px -1px 0 var(--username-outline-color),1px 0px 0 var(--username-outline-color),1px 1px 0 var(--username-outline-color),1px 2px 0 var(--username-outline-color),2px -2px 0 var(--username-outline-color),2px -1px 0 var(--username-outline-color),2px 0px 0 var(--username-outline-color),2px 1px 0 var(--username-outline-color),2px 2px 0 var(--username-outline-color);
     --server-message-shadow: -2px -2px 0 var(--server-message-outline-color),-2px -1px 0 var(--server-message-outline-color),-2px 0px 0 var(--server-message-outline-color),-2px 1px 0 var(--server-message-outline-color),-2px 2px 0 var(--server-message-outline-color),-1px -2px 0 var(--server-message-outline-color),-1px -1px 0 var(--server-message-outline-color),-1px 0px 0 var(--server-message-outline-color),-1px 1px 0 var(--server-message-outline-color),-1px 2px 0 var(--server-message-outline-color),0px -2px 0 var(--server-message-outline-color),0px -1px 0 var(--server-message-outline-color),0px 0px 0 var(--server-message-outline-color),0px 1px 0 var(--server-message-outline-color),0px 2px 0 var(--server-message-outline-color),1px -2px 0 var(--server-message-outline-color),1px -1px 0 var(--server-message-outline-color),1px 0px 0 var(--server-message-outline-color),1px 1px 0 var(--server-message-outline-color),1px 2px 0 var(--server-message-outline-color),2px -2px 0 var(--server-message-outline-color),2px -1px 0 var(--server-message-outline-color),2px 0px 0 var(--server-message-outline-color),2px 1px 0 var(--server-message-outline-color),2px 2px 0 var(--server-message-outline-color);
 }
@@ -88,10 +90,9 @@ span[data-a-target="chat-message-text"] { /* The message text itself */
 .chat-line__message-body--highlighted > span:first-of-type { /* If the message is highlighted, custom highlight */
     line-height: 50px !important;
     padding: 0px 5px 1px 5px !important;
-    border-color: var(--highlight-outline-color) !important;
     background: var(--highlight-bg-color) !important;
-    color: var(--message-color) !important;
-    text-shadow: var(--message-shadow);
+    color: var(--highlight-color) !important;
+    text-shadow: var(--highlight-shadow);
 }
 .chat-input, .stream-chat-header, .channel-leaderboard, .viewer-card-layer__draggable, .chat-line__reply-icon, .chat-paused-footer, .simplebar-track, .chat-room__content > div:first-of-type {
     /* All the bits and bobs we don't want to see */
