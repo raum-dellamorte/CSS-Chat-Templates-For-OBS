@@ -20,10 +20,10 @@ body {
     --message-pointer-color: rgb(54, 135, 119);
     --highlight-outline-color: rgb(119, 49, 77);
     --highlight-bg-color: rgba(114, 76, 230, 0.80);
-    --welcome-line-height: 28px;
-    --welcome-font-size: 24px;
     --welcome-color: rgb(43, 80, 230);
     --welcome-outline-color: rgb(45, 0, 75);
+    --welcome-line-height: 28px;
+    --welcome-font-size: 24px;
     --notice-color: rgb(99, 99, 99); /* Notices from Twitch, like 'Redeemed Highlight My Message' */
     /* No --username-color: Username font colors are random */
     --username-outline-color: rgb(45,0,75);
