@@ -70,10 +70,11 @@ button[data-a-target="chat-badge"] img { /* The chat badges listed in front of a
 .chat-line__username-container { /* Push chat message to next line under username */
     width: 100%;
 }
-.chat-line__no-background > span:first-of-type {
-    color: rgba(0, 0, 0, 0) !important;
+span[aria-hidden="true"] { /* Hiding the : */
+    visibility:hidden;
 }
-.chat-line__no-background > span:first-of-type::after { /* Add a pointer in front of chat message for funsies */
+span[aria-hidden="true"]::after { /* Add a pointer in front of chat message for funsies */
+    visibility: visible;
     content: var(--message-pointer);
     line-height: var(--message-line-height) !important;
     font-size: var(--message-font-size) !important;
