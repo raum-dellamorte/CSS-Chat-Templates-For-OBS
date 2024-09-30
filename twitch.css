@@ -6,9 +6,11 @@
 
 body {
     /* Convenience Variables for basic customization */
+    /* Background color for Chat. Transparency is controlled by the last number with a value from 0.0, transparent, to 1.0, opaque */
+    --chat-background: rgba(10,50,10,0.7);
     /* Chat message settings */
-    --message-color: rgb(0, 192, 173);
-    --message-outline-color: rgb(119, 49, 77);
+    --message-color: rgb(200,200,200);
+    --message-outline-color: rgb(100,0,0);
     --message-line-height: 44px;
     --message-font-size: 40px;
     /* --message-pointer points to the start of a chat message. This should work with any unicode characters, untested */
@@ -36,7 +38,7 @@ body {
     background: transparent !important;
 }
 #root > div {
-    background: rgba(50,20,20,0.7) !important; /* Transparency is controlled by the last number with a value between 0.0, transparent, and 1.0, opaque */
+    background: var(--chat-background) !important; /* Transparency is controlled by the last number with a value between 0.0, transparent, and 1.0, opaque */
     border-radius: 20px; /* To round the corners. (I think, anyway, don't take my word for it.) */
     margin: 20px;
 }
